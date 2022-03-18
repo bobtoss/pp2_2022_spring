@@ -1,0 +1,5 @@
+f=open('list.txt','r')
+x=open("new.txt",'w')
+x.write(f.read())
+f.close()
+x.close()
