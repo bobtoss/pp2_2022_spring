@@ -1,8 +1,6 @@
 import pygame
 import datetime
 width,height = 800, 800
-center= width//2,height//2
-radius=width//2
 pygame.init()
 screen=pygame.display.set_mode([width,height])
 pygame.display.set_caption('MICKEY CLOCK')
@@ -10,16 +8,13 @@ clock=pygame.time.Clock()
 fps=60
 
 image= pygame.image.load('mickeyclock.jpeg').convert()
-
 hand1=pygame.image.load('mikey_hand1.png').convert_alpha()
 hand2=pygame.image.load('mikey_hand2.png').convert_alpha()
-
 
 while True:
     screen.fill(pygame.Color('white'))
 
     screen.blit(image,(-240,-80))
-
 
     key = pygame.key.get_pressed()
 
@@ -41,11 +36,7 @@ while True:
     screen.blit(img,(400-int(x), 400-int(y)))
     screen.blit(img2,(400-int(x2), 400-int(y2)))
 
-    
-    
     for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            exit()
         if key[pygame.K_SPACE]:
             exit()
 
