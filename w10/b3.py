@@ -100,7 +100,7 @@ sql = "select exists(select 1 from users_score where username=%s)"
 cursor.execute(sql, (name,))
 ans = cursor.fetchone()
 if(ans[0]):
-    sql = "select level from users_score where username = %s"
+    sql = "select score from users_score where username = %s"
     cursor.execute(sql, (name,))
     t = cursor.fetchone()
     level = t[0]
